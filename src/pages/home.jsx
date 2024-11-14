@@ -14,6 +14,10 @@ function Home() {
   return (
     <Layout title={'Quick Tech'}>
     <div className=" bg-gray-50">
+    <section className="bg-gradient-to-r from-black to-gray-800 text-white py-2 text-sm text-center">
+  
+       <p>All Templates on our site are fully customizable</p>
+      </section>
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-20 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Create Your Dream Website</h1>
@@ -24,6 +28,8 @@ function Home() {
       {/* Offers Section */}
       <section className="py-16 bg-gray-100">
         <h2 className="text-3xl font-bold text-center mb-10">Exclusive Offers</h2>
+        <p className=" text-center mb-10">Your own customized static site and get ownership</p>
+
         <div className="flex flex-wrap justify-center gap-6 px-4">
           {['Offer 1'].map((offer, index) => (
              <div key={index} className=" rounded-lg p-6 shadow hover:shadow-xl transition">
@@ -37,14 +43,14 @@ function Home() {
         </div>
       </section>
 
-      {/* User Stories Section */}
+      {/* User Stories Section 
       <section className="py-16 bg-white">
         <h2 className="text-3xl font-bold text-center mb-10">Success Stories</h2>
         <div className="grid md:grid-cols-3 gap-8 px-4">
           {['Kiran',].map((user, index) => (
             <div key={index} className="bg-gray-200 rounded-lg p-6 shadow hover:shadow-xl transition">
               <img
-                src={user}
+                src=""
                 alt={user}
                 className="w-1/2 rounded-md mb-4"
               />
@@ -54,6 +60,7 @@ function Home() {
           ))}
         </div>
       </section>
+      */}
 
       {/*  
       <section className="py-16 bg-gradient-to-r from-purple-600 to-blue-500 text-white">
@@ -69,7 +76,7 @@ function Home() {
       </section>
       */}
 
-{/*
+
       <section className="bg-gray-100 py-12">
       <div className="max-w-5xl mx-auto px-4 text-center">
         <h2 className="text-3xl font-semibold mb-8 text-gray-800">
@@ -80,17 +87,22 @@ function Home() {
   {
     name: 'Aromal Sukumar',
     role: 'Python Fullstack Developer',
-    image: 'https://randomuser.me/api/portraits/men/75.jpg',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWBcLPv3yG58oqvAX7NPMxMn5_gmZlnbAc_w&s',
+  },
+  {
+    name: 'Shilaf ',
+    role: 'Frontend  Developer',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWBcLPv3yG58oqvAX7NPMxMn5_gmZlnbAc_w&s',
   },
   {
     name: 'Kiran Binoy',
-    role: 'MERN Fullstack Developer',
-    image: 'https://randomuser.me/api/portraits/women/45.jpg',
+    role: 'MERN stack Developer',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWBcLPv3yG58oqvAX7NPMxMn5_gmZlnbAc_w&s',
   },
   {
     name: 'Rahul Dev',
     role: 'Backend Developer',
-    image: 'https://randomuser.me/api/portraits/men/32.jpg',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWBcLPv3yG58oqvAX7NPMxMn5_gmZlnbAc_w&s',
   },
 ].map((member, index) => (
             <div
@@ -115,7 +127,7 @@ function Home() {
       </div>
     </section>
 
-    */}
+   
 
     </div>
     </Layout>

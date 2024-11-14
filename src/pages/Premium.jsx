@@ -3,14 +3,14 @@ import Layout from '../components/layout/Layout';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-const CategoryProduct = () => {
+const CategoryPremium = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
   // Fetch all products
   const getAllProducts = async () => {
     try {
-      const res = await axios.get('/quicklearn.products.json'); // Ensure this path is correct
+      const res = await axios.get('/quicklearn.premia.json'); // Ensure this path is correct
       const allProducts = res.data;
 
       setProducts(allProducts);
@@ -28,7 +28,7 @@ const CategoryProduct = () => {
   return (
     <Layout>
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-8 text-center">Free Templates</h1>
+        <h1 className="text-3xl font-bold mb-8 text-center"> Premium Templates</h1>
 
         {loading ? (
           <div className="flex justify-center items-center h-64">
@@ -67,4 +67,4 @@ const CategoryProduct = () => {
   );
 };
 
-export default CategoryProduct;
+export default CategoryPremium;

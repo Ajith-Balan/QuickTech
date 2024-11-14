@@ -8,7 +8,7 @@ const ProductDetails = () => {
   const [relatedProducts, setRelatedProducts] = useState([]);
   const navigate = useNavigate();
 
-  // Fetch the product whenever the `id` changes
+  // Fetch product details and related products when the `id` changes
   useEffect(() => {
     getProduct();
     window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top smoothly
@@ -16,17 +16,27 @@ const ProductDetails = () => {
 
   const getProduct = async () => {
     try {
-      const res = await fetch('/quicklearn.products.json'); // Ensure this path is correct
-      if (!res.ok) throw new Error('Network response was not ok');
-      const data = await res.json();
-      
+      // Fetch data from two different JSON files
+      const [res1, res2] = await Promise.all([
+        fetch('/quicklearn.products.json'),
+        fetch('/quicklearn.premia.json'),
+      ]);
+
+      if (!res1.ok || !res2.ok) throw new Error('Network response was not ok');
+
+      const data1 = await res1.json();
+      const data2 = await res2.json();
+
+      // Combine the products from both JSON files
+      const combinedData = [...data1, ...data2];
+
       // Find the product with the matching `id`
-      const currentProduct = data.find((item) => item._id.$oid === id);
+      const currentProduct = combinedData.find((item) => item._id.$oid === id);
       setProduct(currentProduct || {});
-      
+
       // Fetch related products if category exists
       if (currentProduct?.category) {
-        const related = data.filter(
+        const related = combinedData.filter(
           (item) =>
             item.category === currentProduct.category && item._id.$oid !== id
         );
@@ -71,18 +81,21 @@ const ProductDetails = () => {
             </a>
             <a
               href={product.livelink}
-              target="_blank"
               rel="noopener noreferrer"
               className="flex-1 bg-green-500 hover:bg-green-600 text-white py-2 rounded transition"
             >
               Live Preview
             </a>
           </div>
-          <span className="text-gray-500 text-sm">Feel Free to ask, WhatsApp now</span>
+          <span className="text-gray-500 text-sm">
+            Feel Free to ask, WhatsApp now
+          </span>
         </div>
 
         {/* Product Description */}
-        <p className="text-gray-700 text-sm md:text-base">{product.descrition}</p>
+        <p className="text-gray-700 text-sm md:text-base">
+          {product.descrition}
+        </p>
 
         {/* Related Products Section */}
         {relatedProducts.length > 0 && (
@@ -90,7 +103,7 @@ const ProductDetails = () => {
             <h3 className="text-2xl font-semibold mb-6">Related Products</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {relatedProducts.map((item) => (
-                <Link to={`/product/${item._id}`} key={item._id}>
+                <Link to={`/product/${item._id.$oid}`} key={item._id.$oid}>
                   <div className="max-w-sm bg-white rounded-lg shadow-lg overflow-hidden">
                     <img
                       src={item.photo}
@@ -98,7 +111,9 @@ const ProductDetails = () => {
                       className="w-full h-48 object-cover"
                     />
                     <div className="p-4">
-                      <h2 className="text-xl font-semibold text-gray-800">{item.name}</h2>
+                      <h2 className="text-xl font-semibold text-gray-800">
+                        {item.name}
+                      </h2>
                       <p className="text-green-600 font-bold">₹{item.amount}</p>
                     </div>
                   </div>

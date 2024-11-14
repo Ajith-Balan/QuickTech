@@ -5,7 +5,7 @@ const SearchResult = () =>{
     return(
         <>
         <Layout>
-        <div className="max-w-7xl pt-10 flex text-lg flex-col gap-10 bg-white mx-auto px-4 sm:px-6 lg:px-8 min-h-screen">
+        <div className="max-w-7xl pt-10 flex text-lg flex-col gap-10 bg-white mx-auto px-4 sm:px-6 lg:px-8 h-screen">
         <Link
         to={'/about'}
          className="border-b-2">

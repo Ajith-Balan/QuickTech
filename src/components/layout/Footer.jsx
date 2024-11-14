@@ -29,24 +29,28 @@ const Footer = () => {
       
     </Link>
  
-  {categories.map((category) => (
-  <Link
+    <Link
    className='flex flex-col items-center'
-    key={category._id.$oid}
-    to={`/category/${category._id.$oid}`}
-   
-  >
-   
-    
-
+    to={`/free`}
+     >
+       
 <CgTemplate 
     size={20}/>
-{category.name}
-
-        
+Free
+     
+      
+  </Link> 
+   <Link
+   className='flex flex-col items-center'
+    to={`/premium`}
+     >
        
+<CgTemplate 
+    size={20}/>
+premium
+     
+      
   </Link>
-))}
 
   
    

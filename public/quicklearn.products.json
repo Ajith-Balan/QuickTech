@@ -1,22 +1,4 @@
-[{
-  "_id": {
-    "$oid": "673476b82182fe1ae7d24b12"
-  },
-  "name": "Comming soon!!!!!, We are working on it",
-  "photo": "d",
-  "descrition": "soon",
-  "livelink": "erg",
-  "downldlink": "gt",
-  "amount": "t",
-  "category": "67331691d166f747784a87eb",
-  "createdAt": {
-    "$date": "2024-11-13T09:51:52.450Z"
-  },
-  "updatedAt": {
-    "$date": "2024-11-13T09:51:52.450Z"
-  },
-  "__v": 0
-},
+[
 {
   "_id": {
     "$oid": "67349038ab9952e331a3ee32"

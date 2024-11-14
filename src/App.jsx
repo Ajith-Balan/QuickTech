@@ -14,6 +14,7 @@ import CategoryProduct from './pages/CategoryProduct';
 import SearchResult from './pages/SearchResults';
 import ProductDetails from './pages/ProductDetails';
 import HelpPage from './pages/HelpPage';
+import CategoryPremium from './pages/Premium';
 function App() {
   return (
     <>
@@ -22,7 +23,9 @@ function App() {
         <ToastContainer />
         <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/category/:id' element={<CategoryProduct />} />
+        <Route path='/free' element={<CategoryProduct />} />
+        <Route path='/premium' element={<CategoryPremium />} />
+
         <Route path='/product/:id' element={<ProductDetails />} />
 
         <Route path='/search' element={<SearchResult />} />

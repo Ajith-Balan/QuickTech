@@ -20,13 +20,13 @@ const Header = () => {
 
 
   return (
-    <nav className="w-full bg-gradient-to-r  from-blue-100 to-blue-800 fixed z-10 border-b-2 top-0">
+    <nav className="w-full bg-gradient-to-r  from-blue-100 to-blue-800 fixed z-10  top-0">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-10">
           {/* Logo */}
           <div >
             <Link to="/" className="text-black text-lg font-bold">
-              <img className="h-8 w-20 object-cover  rounded" src={logo} alt="Quick Learn" />
+              <img className="h-8 w-8 object-cover  rounded" src={logo} alt="Quick Learn" />
               {/* Quick Learn */}
             </Link>
           </div>
