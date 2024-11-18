@@ -99,7 +99,7 @@ const CategoryPremium = () => {
                   <div className="p-4">
                     <h2 className="text-2xl font-semibold text-gray-800">{product.name}</h2>
 
-                      <a     href={"https://ajith-balan.github.io/woody/"}
+                      <a     href={product.livelink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex   text-blue-800">
