@@ -28,7 +28,7 @@ const CategoryProduct = () => {
   return (
     <Layout>
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-8 text-center">Free Templates</h1>
+        <h1 className="text-3xl font-bold mb-8 text-center"> Templates</h1>
 
         {loading ? (
           <div className="flex justify-center items-center h-64">
@@ -40,7 +40,7 @@ const CategoryProduct = () => {
             {products.map((product) => (
               <div
                 key={product._id.$oid}
-                className="max-w-sm bg-white rounded-lg shadow-lg overflow-hidden"
+                className="max-w-sm  rounded-lg shadow-lg overflow-hidden"
               >
                 <Link to={`/product/${product._id.$oid}`}>
                   <img

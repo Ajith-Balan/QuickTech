@@ -1,20 +1,39 @@
 [
-{
-  "_id": {
-    "$oid": "67349038ab9952e331a3ee32"
+  {
+    "_id": {
+      "$oid": "67349038ab9952e331a3ee32"
+    },
+    "name": "Woody",
+    "photo": "https://i.imgur.com/QEl6Hgg.png",
+    "descrition": "Woody is a dedicated platform for handcrafted wooden products that blends traditional craftsmanship with modern design. Our mission is to bring the beauty and warmth of wood into your home and office with personalized, high-quality wooden items. From custom furniture pieces to unique décor accents, Woody caters to customers who appreciate sustainable and artisanal craftsmanship.",
+    "livelink": "https://ajith-balan.github.io/woody/",
+    "downldlink": "https://github.com/Ajith-Balan/woody/archive/refs/heads/main.zip",
+    "amount": "Free",
+    "category": "67331686d166f747784a87e6",
+    "createdAt": {
+      "$date": "2024-11-13T11:40:41.204Z"
+    },
+    "updatedAt": {
+      "$date": "2024-11-13T11:48:36.849Z"
+    },
+    "__v": 0
   },
-  "name": "Woody",
-  "photo": "https://i.imgur.com/QEl6Hgg.png",
-  "descrition": "Woody is a dedicated platform for handcrafted wooden products that blends traditional craftsmanship with modern design. Our mission is to bring the beauty and warmth of wood into your home and office with personalized, high-quality wooden items. From custom furniture pieces to unique décor accents, Woody caters to customers who appreciate sustainable and artisanal craftsmanship.",
-  "livelink": "https://ajith-balan.github.io/woody/",
-  "downldlink": "https://github.com/Ajith-Balan/woody/archive/refs/heads/main.zip",
-  "amount": "Free",
-  "category": "67331686d166f747784a87e6",
-  "createdAt": {
-    "$date": "2024-11-13T11:40:41.204Z"
-  },
-  "updatedAt": {
-    "$date": "2024-11-13T11:48:36.849Z"
-  },
-  "__v": 0
-}]
+   {
+    "_id": {
+      "$oid": "67349038ab564631a3ee32"
+    },
+    "name": "Traing Studio",
+    "photo": "https://i.imgur.com/cnHrTnm.png",
+    "descrition": "Elevate Gym Training Center: Your ultimate fitness destination! We offer personalized training programs, state-of-the-art equipment, and certified trainers to help you achieve your health and fitness goals. Whether you're looking to build strength, lose weight, or improve overall wellness, our supportive community and tailored workouts ensure you stay motivated and see results. Start your fitness journey with us today!",
+    "livelink": "https://ajith-balan.github.io/Training-studio/",
+    "downldlink": "https://github.com/Ajith-Balan/woody/archive/refs/heads/main.zip",
+    "amount": "Free",
+    "category": "67331686d166f747784a87e6",
+    "createdAt": {
+      "$date": "2024-11-13T11:40:41.204Z"
+    },
+    "updatedAt": {
+      "$date": "2024-11-13T11:48:36.849Z"
+    },
+    "__v": 0
+  }]

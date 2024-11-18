@@ -16,9 +16,7 @@ const SearchResult = () =>{
           className="border-b-2">
           Help
           </Link>
-           <Link className="border-b-2">
-          Pricing
-          </Link> 
+          
           <Link className="border-b-2"
           to={'/contact'}
           >

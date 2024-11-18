@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'; // Assuming you're using React Router for navigation
 import { FaInstagram, FaWhatsapp, FaEnvelope,  } from 'react-icons/fa';
 import { CgTemplate } from "react-icons/cg";
-import { GoHome } from "react-icons/go";
+import { GoHome,GoProjectSymlink  } from "react-icons/go";
 import { IoMdMenu } from "react-icons/io";
 
 import useCategory from '../../hooks/useCategory';
@@ -36,7 +36,7 @@ const Footer = () => {
        
 <CgTemplate 
     size={20}/>
-Free
+Templates
      
       
   </Link> 
@@ -45,9 +45,9 @@ Free
     to={`/premium`}
      >
        
-<CgTemplate 
+<GoProjectSymlink 
     size={20}/>
-premium
+projects
      
       
   </Link>

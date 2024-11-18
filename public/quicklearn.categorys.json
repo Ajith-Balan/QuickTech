@@ -1,14 +1,77 @@
 [{
   "_id": {
-    "$oid": "67331686d166f747784a87e6"
+    "$oid": "6727113358691aabf6298d20"
   },
-  "name": "Free",
+  "name": "Current affairs 1",
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "67331691d166f747784a87eb"
+    "$oid": "6729c3fee1d9849da77169d2"
   },
-  "name": "Premium",
+  "name": "Biology",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67397657880914bc07dd1568"
+  },
+  "name": "English",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67397c89880914bc07dd15d7"
+  },
+  "name": "Malayalam",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67398446880914bc07dd161c"
+  },
+  "name": "Polity of Kerala",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "673985f9880914bc07dd1634"
+  },
+  "name": "Geography of Kerala",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67398769880914bc07dd164c"
+  },
+  "name": "Economy of Kerala",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67398e62880914bc07dd1669"
+  },
+  "name": "History of Kerala",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6739910f880914bc07dd1685"
+  },
+  "name": "Physical Geography",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6739a006beb31f4142e8a37b"
+  },
+  "name": "Indian Geography",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6739a66c5741b0489ed09284"
+  },
+  "name": "Environment Degradation",
   "__v": 0
 }]

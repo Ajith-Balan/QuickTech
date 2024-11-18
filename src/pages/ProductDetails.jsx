@@ -14,6 +14,14 @@ const ProductDetails = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top smoothly
   }, [id]);
 
+  const handleWhatsAppClick = () => {
+    const phoneNumber = '8129718562'; // Replace with your WhatsApp number
+    const message = `Hello! I would like to buy ${product.name} site, can you tell me the details`;
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  };
+
+
   const getProduct = async () => {
     try {
       // Fetch data from two different JSON files
@@ -35,13 +43,7 @@ const ProductDetails = () => {
       setProduct(currentProduct || {});
 
       // Fetch related products if category exists
-      if (currentProduct?.category) {
-        const related = combinedData.filter(
-          (item) =>
-            item.category === currentProduct.category && item._id.$oid !== id
-        );
-        setRelatedProducts(related);
-      }
+    
     } catch (error) {
       console.error('Error fetching product:', error);
     }
@@ -64,21 +66,18 @@ const ProductDetails = () => {
           <hr className="border-gray-300" />
           <h6 className="text-lg md:text-2xl font-semibold">{product.name}</h6>
           <div className="flex gap-2 mt-2 items-center">
-            <h2 className="text-xl text-green-600 font-bold">
-              ₹{product.amount}
-            </h2>
+           
           </div>
 
           {/* Add to Cart and Buy Now Buttons */}
           <div className="mt-4 text-center flex gap-2">
-            <a
-              href={product.downldlink}
+            <button
               target="_blank"
-              rel="noopener noreferrer"
+              onClick={handleWhatsAppClick}
               className="flex-1 bg-blue-500 hover:bg-blue-600 text-white py-2 rounded transition"
             >
               Get Now
-            </a>
+            </button>
             <a
               href={product.livelink}
               rel="noopener noreferrer"
@@ -97,31 +96,7 @@ const ProductDetails = () => {
           {product.descrition}
         </p>
 
-        {/* Related Products Section */}
-        {relatedProducts.length > 0 && (
-          <div className="container mx-auto px-4 py-8">
-            <h3 className="text-2xl font-semibold mb-6">Related Products</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {relatedProducts.map((item) => (
-                <Link to={`/product/${item._id.$oid}`} key={item._id.$oid}>
-                  <div className="max-w-sm bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img
-                      src={item.photo}
-                      alt={item.name}
-                      className="w-full h-48 object-cover"
-                    />
-                    <div className="p-4">
-                      <h2 className="text-xl font-semibold text-gray-800">
-                        {item.name}
-                      </h2>
-                      <p className="text-green-600 font-bold">₹{item.amount}</p>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
+     
       </div>
     </Layout>
   );
