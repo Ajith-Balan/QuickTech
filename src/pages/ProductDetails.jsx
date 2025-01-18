@@ -16,7 +16,7 @@ const ProductDetails = () => {
 
   const handleWhatsAppClick = () => {
     const phoneNumber = '8129718562'; // Replace with your WhatsApp number
-    const message = `Hello! I would like to buy ${product.name} site, can you tell me the details`;
+    const message = `"Hello! I'm interested in the ${product.name} Could you share the details? `;
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   };
