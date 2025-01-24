@@ -46,7 +46,7 @@ Services
        
 <GoProjectSymlink 
     size={20}/>
-projects
+Works
      
       
   </Link>
