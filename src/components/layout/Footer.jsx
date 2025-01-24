@@ -36,8 +36,7 @@ const Footer = () => {
        
 <CgTemplate 
     size={20}/>
-Templates
-     
+Services     
       
   </Link> 
    <Link
