@@ -11,7 +11,7 @@ const Footer = () => {
 
     const handleWhatsAppClick = () => {
       const phoneNumber = '8129718562'; // Replace with your WhatsApp number
-      const message = 'Hello! I would like to inquire about...';
+      const message = 'Hello! I would like to enquire about...';
       const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
       window.open(url, '_blank');
     };
