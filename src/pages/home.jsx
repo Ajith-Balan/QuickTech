@@ -290,7 +290,7 @@ function Home() {
                   image: 'https://img.freepik.com/premium-photo/portrait-young-handsome-white-american-nerdy-it-software-developer-programmer-worker-illustration-ai-generative_407474-17714.jpg?semt=ais_hybrid',
                 },
                 {
-                  name: 'Nidin Bose ',
+                  name: 'Rithin Jos ',
                   role: 'Frontend Developer',
                   image: 'https://png.pngtree.com/png-vector/20240529/ourmid/pngtree-web-programmer-avatar-png-image_12529205.png',
                 },
